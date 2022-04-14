@@ -1,0 +1,23 @@
+{% extends 'base_layout.html' %}
+
+{% block content%}
+
+    {% if user.is_authenticated %}
+        {% if user.id == lecture.user_account_id %}
+            <div class="edit_profile">
+                <h2>Edit profile</h2>
+                <form class="profile_edit_form" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button> Update </button>
+                </form>
+            </div>
+        {% else %}
+            <p>You are not the correct user to edit this page</p>
+        {% endif %}
+    {% else %}
+        <p>You need to be logged in to access this page</p>
+    {% endif %}
+
+
+{% endblock %}

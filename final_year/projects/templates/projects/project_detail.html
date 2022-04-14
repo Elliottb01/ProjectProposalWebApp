@@ -1,0 +1,27 @@
+{% extends 'base_layout.html' %}
+
+{% block content%}
+<div class="project-detail-box">
+    <div class="project-detail">
+        <h2>{{ proj_detail.title }}</h2>
+        <h1>{{proj_detail.lecture.id}}</h1>
+        <p>{{proj_detail.description}}</p>
+        <p><strong> Conceptual:</strong> {{proj_detail.conceptual}} &emsp; <strong> Programming:</strong> {{proj_detail.programming}} &emsp; <strong> Technical:</strong> {{proj_detail.technical}}</p>
+        {% for p_skills in p_skill %}
+            <P>{{ p_skills }}</P>
+        {% endfor %}
+        {% for p_subjects in p_subject %}
+           <P>{{ p_subjects }}</P>
+        {% endfor %}
+        <p>{{proj_detail.date}}</p>
+        
+    </div>
+</div>
+<div class="footer1">
+    <p>safds</p>
+</div>
+{% endblock %}
+
+<strong>  
+
+</strong>

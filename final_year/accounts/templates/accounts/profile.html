@@ -1,0 +1,37 @@
+{% extends 'base_layout.html' %}
+
+{% block content%}
+
+                <div class="container mt-2 shadow p-3 mb-5 bg-white rounded">
+
+                        <div class="row border-bottom pb-2">
+                                <div class="col-auto .mr-auto">
+                                        {% if page_user.profilepic %}
+                                                <img class="img" style="height: 192px; width: 192px;"  src="{{ page_user.profilepic.url }}">
+                                        {% endif %}
+                                </div>
+                                <div class=".col-md-3 .ml-md-auto">
+                                        <h2>{{ page_user.title }}. {{ page_user.first_name }} {{ page_user.last_name }} </h2>
+                                        <h5>{{ page_user.faculty }}</h5>
+                                        <p><strong>Office:</strong> &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; {{  page_user.office }}</p>
+                                        <p><strong>Telephone:</strong> &emsp;&emsp;&emsp;&emsp;&emsp; {{ page_user.number }}</p>
+                                        <p><strong>Email:</strong>  &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp; {{ page_user.email }}</p>
+                                        
+                                </div>
+                        </div>
+
+                        <div class="row border-bottom pt-2">
+                                <div class="col-auto .mr-auto">
+                                        <h3>About</h3>
+                                        <p> {{ page_user.lec_description }}</p>
+                                </div>
+                        </div>
+                        <div class="row pt-2">
+                                <div class="col-auto .mr-auto">
+                                        <h3>Projects</h3>
+                                        <p>Projects lectuer has posted go here</p>
+                                </div>
+                        </div>   
+                </div>
+
+{% endblock %}

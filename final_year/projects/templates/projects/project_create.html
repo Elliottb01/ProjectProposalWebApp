@@ -1,0 +1,23 @@
+{% extends 'base_layout.html' %}
+
+{% block content%}
+
+    {% if user.is_authenticated %}
+
+
+        <h2>Create project</h2>
+        <div class="create-project">
+            <div class="form-group">
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-primary">Create</button>
+                </form>
+            </div>
+        </div>
+
+    {% else %}
+        <h1>You must be logged in to view this page</h1>
+    {% endif %} 
+
+{% endblock %}

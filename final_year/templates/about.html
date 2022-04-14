@@ -1,0 +1,38 @@
+{% extends 'base_layout.html' %}
+{% load static %}
+
+{% block content %}
+<div>
+    <h1 class="page_margin" style="text-align: center;">About The Project</h1>
+    <div class="about" style="background:#094135">
+        <h1 class="habout">Project Background</h1>
+        <p class="pabout">‘Helping students find projects’ is a project proposed by Martin Stacey that aims to provide a
+            better platform for managing and viewing final year projects proposals. With the number of projects proposed
+            every year finding one can be difficult for students especially when projects are uploaded to multiple media
+            whether this be xlsx spreadsheets, word documents or lecturer ‘project proposal web pages.’ </p>
+    </div>
+    <div class="about" style="background: #333;">
+        <h1 class="habout">Project Aims</h1>
+        <p class="pabout">This website aims to provide a web-based platform that students and lecturers can use to
+            upload and view final year projects. Lectures will be able to upload their proposed projects along with
+            information such as keywords, brief description of the project along with a rating of how difficult the
+            project is. Students will be able to search the database of proposed projects using search parameters such
+            as keywords, difficulty rating and the lecturer that proposed the project</p>
+    </div>
+    <div class="about" style="background: #094135;">
+        <h1 class="habout">Feature Set</h1>
+        <div class="ulparent">
+            <ul class="ulabout">
+                <li class="liabout">Create and edit user profiles</li>
+                <li class="liabout">Upload Project Proposals</li>
+                <li class="liabout">Edit and update existing project proposals</li>
+                <li class="liabout">View and filter through uploaded project proposals</li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer">
+
+    </div>
+</div>
+
+{% endblock %}

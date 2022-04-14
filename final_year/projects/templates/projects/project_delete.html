@@ -1,0 +1,20 @@
+{% extends 'base_layout.html' %}
+
+{% block content%}
+
+    {% if user.is_authenticated %}
+    
+        <div class="delete-project">
+            <h2>Delete project: {{ proj_detail.title }}</h2> 
+            <h2>Create project</h2>
+            <form method="POST" >
+                {% csrf_token %}
+                <button>Delete Project</button>
+            </form>
+        </div>
+
+    {% else %}
+        <h1>You must be logged in to view this page</h1>
+    {% endif %} 
+
+{% endblock %}

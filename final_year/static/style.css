@@ -1,0 +1,327 @@
+
+/* Set colour of webpage     background-color: #e2e2e2 ;*/
+body{
+  background-color: #e2e2e2 ;
+}
+/* Used to center elements such as image/logo at top of pages */
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+/* Navigation bar styling START */
+
+nav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  nav li {
+    float: left;
+    border-right: 1px solid #bbb;
+  }
+  
+  nav li a, .dropbtn {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  nav li a:hover, .dropdown:hover .dropbtn {
+    background-color: #111;
+  }
+
+  
+nav li:last-child {
+    border-right: none;
+  }
+  
+  .active {
+    background-color: #04AA6D;
+  }
+
+  nav button{
+      display: block;
+      background: none;
+      color: white;
+      cursor: pointer;
+      border: 0ch;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+      
+  }
+/* Navigation bar styling END */
+
+.site-form{
+    box-sizing: border-box;
+    min-height: 100px;
+    text-align: left;
+    position: relative;
+    width: 100%;
+    padding: 35px 75px 95px 75px;
+    padding-bottom: 95px;
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 0px;
+    margin-bottom: 30px;
+    overflow: hidden;
+    background: #fff;
+    -webkit-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 4px 4px;
+}
+
+/* Login and signup form styling START*/
+.site-form input, .site-form textarea{
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding: 2px;
+
+}
+
+.helptext, .helptext ul{
+    align-content: left;
+    display: block;
+    text-align: left;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    font-size: 0.95em;
+    color: #707070;
+}
+
+/* Login and signup form styling END*/
+
+/* Project creation form styling START*/
+.project-form{
+    display: block;
+
+}
+
+.project-form input, .project-form textarea{
+    display: block;
+}
+
+.create-project{
+  margin-left: 1%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-right: 1%;
+  border: #111 solid 1px;
+}
+
+/* Project creation form styling END*/
+
+
+
+
+nav li.dropdown {
+  display: inline-block;
+}
+
+nav .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+nav .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Homepage styling START*/
+
+.img-round {
+  border-radius: 10px;
+  border: 2px solid #333;
+}
+
+.img-container{
+  height: 400px;
+  width: 256px;
+  padding: 10px 20px;
+  float: left;
+}
+
+
+/* Homepage styling END*/
+
+/* Project list styling START */
+
+.filter {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-left: 1%;
+  margin-right: 1%;
+  border-radius: 5px;
+  width: 91%;
+}
+
+.project_list{
+  background: #fff;
+  padding: 10px;
+  margin-left: 1%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #111;
+  width: 45%;
+  max-width: 45%;
+  min-height: 20vh;
+  border-radius: 5px;
+  display: inline-block;
+  word-wrap: break-word;
+  vertical-align: top;
+}
+
+.project-detail{
+  margin-left: 1%;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  word-wrap: break-word;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  padding-right: 20px;
+}
+
+.project-detail-box{
+  background: #fff;
+  width: 45%;
+  border-radius: 5px;
+  margin-top: 10px;
+  border: 2px solid #111;
+  margin-bottom: 10vh;
+}
+
+
+
+/* Project list styling END */
+ 
+.page_margin{
+  margin-left: 1%;
+}
+
+p {
+  font-family: 'Open Sans',sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', sans-serif;
+}
+
+.banner-img{
+  width: auto;
+  height: auto;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.about{
+  background: #fff;
+  padding: 10px;
+  width: 100%;
+  float: left;
+  min-height: 250px;
+  max-height: auto;
+  margin-bottom: 4px;
+}
+
+.pabout{
+  text-align: center;
+  padding-left: 25%;
+  padding-right: 25%;
+  color: white;
+  font-size: 20px;
+}
+.habout{
+  text-align: center;
+  color: white;
+}
+
+.ulabout{
+  padding-left: 25%;
+  padding-right: 25%;
+  display: inline-block;
+  text-align: left;
+}
+.liabout{
+  color: white;
+  font-size: 20px;
+  font-family: 'Open Sans',sans-serif;
+}
+
+.ulparent{
+  text-align: center;
+}
+
+.footer{
+  background: #333;
+  padding: 10px;
+  width: 100%;
+  float: left;
+  min-height: 200px;
+  max-height: auto;
+  margin-bottom: 4px;
+}
+
+.footer1{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: red;
+  color: white;
+  text-align: center;
+}
+
+/* profile page */
+
+.profilepage{
+  padding-top: 1%;
+  
+}
+
+.profilepic{
+  display: inline-block;
+  padding-right: 1%;
+  height: 100vh;
+  padding-top: 1%;
+  border: 2px solid #111;
+}
+
+.profilebody{
+  display: inline-block;
+  vertical-align: top;
+  border: 2px solid #111;
+  max-width: 40%;
+}
+
+/* forms */
+

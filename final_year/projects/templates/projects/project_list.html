@@ -1,0 +1,41 @@
+{% extends 'base_layout.html' %}
+
+{% block content %}
+
+<div class="container-fluid m-3 ">
+    <div class="row">
+        <div class=col">
+            <h1 class="page_margin">Proposed Projects</h1>
+        </div>
+    </div>
+    <div class="row mr-3"> 
+        <div class="">
+            <form method="GET">
+                {{ filter.form }}
+                <button type="submit" class="btn btn-primary "> Search </button>
+            </form>
+        </div>
+    </div>
+    {% for project in filter.qs %} 
+        {% if forloop.counter0|divisibleby:3 %}
+        <div class="row mr-3" >
+        {% endif %}
+                <div class="col shadow p-3 bg-white rounded border-bottom mr-3 mt-3 mb-3">
+                    <h2><a href="{% url 'projects:detail' pk=project.id %}">{{project.title}}</a></h2>
+                    <p><strong>Conceptual:</strong> {{project.conceptual}} <strong>Technical:</strong> {{project.technical}} <strong>Programming:</strong> {{project.programming}}</p>
+                    <p>{{project.snippet}}</p>
+                    <p>{{project.date}}</p>
+                    {% if user.is_authenticated %}
+                        {% if user.id == project.lecture2.id %}
+                            <a href="{% url 'projects:edit' pk=project.id %}"> Edit </a>
+                            <a href="{% url 'projects:proddelete' pk=project.id %}"> Delete </a>
+                        {% endif %}
+                    {% endif %}
+                </div>
+        {% if forloop.counter|divisibleby:3 %}
+        </div>
+        {% endif %} 
+    {% endfor %}                  
+</div>
+
+{% endblock %}
