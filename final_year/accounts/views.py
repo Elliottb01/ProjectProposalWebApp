@@ -9,26 +9,26 @@ from . import forms
 from django.views.generic.detail import DetailView
 from django.contrib.auth.decorators import login_required
 from .models import Lecture
-from .forms import CreateProfile
+from .forms import CreateProfile, user_login_form, user_sighup_Form
 from django.views import generic
 
 # Create your views here.
 
 def signup_view(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = user_sighup_Form(request.POST)
         if form.is_valid():
             user=form.save()
             login(request,user)
             
             return redirect('projects:list')
     else:
-        form = UserCreationForm()
+        form = user_sighup_Form()
     return render(request, 'accounts/signup.html', {'form': form})
 
 def login_view(request):
     if request.method == 'POST':
-        form = AuthenticationForm(data=request.POST)
+        form = user_login_form(data=request.POST)
         if form.is_valid():
             #log in user
             user= form.get_user()
@@ -39,7 +39,7 @@ def login_view(request):
                 return redirect('projects:list')
 
     else:
-        form = AuthenticationForm()
+        form = user_login_form()
     return render(request, 'accounts/login.html', {'form': form})
 
 def logout_view(request):

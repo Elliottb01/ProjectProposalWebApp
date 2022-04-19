@@ -2,15 +2,24 @@
 
 {% block content%}
 
-    <h1>Log in</h1>
-
-<form class='site-form' action="{% url 'accounts:login' %}" method="post">
-    {% csrf_token %}
-    {{form}}
-    {% if request.GET.next %}
-        <input type="hidden" name="next" value="{{request.GET.next}}">
-    {% endif %}
-    <input type="submit" value="Login">
-</form>
+<div class="container mt-2 shadow p-3 mb-5 bg-white rounded" style="max-width: fit-content;">
+    <div class="row justify-content-md-center">
+        <div class="col col-auto .mr-auto " >
+            <h1>Sign In</h1>
+        </div>
+    </div>
+    <div class="row justify-content-md-center ">
+        <div class="col col-auto .mr-auto mt-3 mr-2 ml-2 mb-2">
+            <form action="{% url 'accounts:login' %}" method="post" style="border: 2px solid greenl;">
+                {% csrf_token %}
+                {{form.as_p}}
+                {% if request.GET.next %}
+                    <input type="hidden" name="next" value="{{request.GET.next}}">
+                {% endif %}
+                <button type="submit" class="btn btn-primary ">Login</button>
+            </form>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

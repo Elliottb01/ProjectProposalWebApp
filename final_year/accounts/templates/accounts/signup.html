@@ -2,12 +2,23 @@
 
 {% block content%}
 
-    <h1>Signup</h1>
 
-<form class='site-form' action="/accounts/signup/" method="post">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" value="Signup">
-</form>
-
+<div class="container container mt-2 shadow p-3 mb-5 bg-white rounded" style="max-width: 100vh;">
+    <div class="row justify-content-md-center">
+        <div class="col col-auto .mr-auto " >
+            <h1>Signup</h1>
+        </div>
+    </div>
+    <div class="row justify-content-md-center">
+        <div class="col col col-auto .mr-auto">
+            <div class="form-group">
+                <form  action="/accounts/signup/" method="post">
+                    {% csrf_token %}
+                    {{form.as_p}}
+                    <button type="submit" class="btn btn-primary">Signup</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}
